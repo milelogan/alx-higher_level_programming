@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 def new_in_list(my_list, idx, element):
+    new_list_created = my_list.copy()
     if idx < 0:
-        return my_list.copy()
+        return new_list_created
     elif idx > len(my_list) - 1:
-        return my_list.copy()
+        return new_list_created
     else:
-        my_list[idx] = element
-        return my_list
+        new_list_created[idx] = element
+        return new_list_created
