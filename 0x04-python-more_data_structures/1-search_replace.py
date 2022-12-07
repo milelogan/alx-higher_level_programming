@@ -4,4 +4,4 @@ def search_replace(my_list, search, replace):
         return my_list
 
     new_list = [element if element is not search else replace for element in my_list]
-    return my_list
+    return new_list
