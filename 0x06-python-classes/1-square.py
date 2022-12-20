@@ -2,9 +2,9 @@
 """Check Again"""
 
 class Square:
-    pass
     """Creating an empty square class"""
+    pass
 
     def __init__(self, size):
-        self.size = size
         """size is a private attribute"""
+	self.size = size
