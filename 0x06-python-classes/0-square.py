@@ -3,3 +3,6 @@
 
 class Square:
     pass
+	"""
+	Creating an empty square object
+	"""
