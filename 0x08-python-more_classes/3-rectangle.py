@@ -14,8 +14,7 @@ class Rectangle:
     def __str__(self):
         if self.width == 0 or self.height == 0:
             return ""
-        return('\n'.join('#' * self.width for x in range(self.height)))
-            
+        return "\n".join("#" * self.width for x in range(self.height))
 
     def area(self):
         """area of a rectangle"""
