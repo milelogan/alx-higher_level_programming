@@ -1,17 +1,15 @@
 #!/usr/bin/python3
-"""pascals triangle"""
+"""pascal triangle"""
+
 
 def pascal_triangle(n):
-	"""returns list of integers"""
-    if n <= 0:
-        return []
-
-    triangles = [[1]]
-    while len(triangles) != n:
-        tri = triangles[-1]
-        tmp = [1]
-        for i in range(len(tri) - 1):
-            tmp.append(tri[i] + tri[i + 1])
-        tmp.append(1)
-        triangles.append(tmp)
-    return triangles
+    """does it"""
+    Triangle = []
+    prevN = []
+    for i in range(n):
+        atN = [1] + [sum(prevN[ele:ele + 2]) for ele in range(len(prevN) - 1)]
+        if i > 0:
+            atN = atN + [1]
+        Triangle.append(atN)
+        prevN = atN
+    return Triangle
