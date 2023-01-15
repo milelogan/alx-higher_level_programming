@@ -48,6 +48,17 @@ class Rectangle(Base):
                 if hasattr(self, key):
                     setattr(self, key, value)
 
+    def to_dictionary(self):
+        """returns a dict representation of Rectangle"""
+        dictionary = {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y,
+        }
+        return dictionary
+
     @property
     def width(self):
         """returns width"""
