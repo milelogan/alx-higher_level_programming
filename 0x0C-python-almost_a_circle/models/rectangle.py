@@ -35,9 +35,18 @@ class Rectangle(Base):
             self.height,
         )
 
-
-    def update(self, *args):
-        pass
+    def update(self, *args, **kwargs):
+        """updates the attributes by assigning keys"""
+        if args:
+            i = 0
+            keys = ["id", "width", "height", "x", "y"]
+            for n in args:
+                setattr(self, keys[i], n)
+                i += 1
+        elif kwargs:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
 
     @property
     def width(self):
