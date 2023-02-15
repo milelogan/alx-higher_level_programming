@@ -1,2 +1,3 @@
---create a table unique id
-CREATE TABLE IF NOT EXISTS `unique_id` (`id` INT DEFAULT 1 UNIQUE, `name` VARCHAR(256));
+--create a table unique_id on your mysql server
+--creates a table
+CREATE TABLE IF NOT EXISTS unique_id (id INT DEFAULT 1 UNIQUE, name VARCHAR(256));
